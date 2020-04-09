@@ -51,7 +51,7 @@ To prepare the zip file, proceed as follows:
 3. Create an Excel file and name it correspondences.xlsx. In this file, in the first row of the first worksheet, add the names of the folders: the first folder in the first cell (A1), and the second folder in the second cell (A2). The first two cells of the spreadsheet must contain the names of the two folders. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-If the base name of the modified files is the **same** as the original files plus some addition (e.g. `PISA_srp-SRB_SCI_S514_eng_FT2018_TRANSLATED.xlf` vs `PISA_srp-SRB_SCI_S514_eng_FT2018_VERIFIED.xlf`), you don't need to do anything else (see an example). 
+If the base name of the modified files is the **same** as the original files plus some addition (e.g. `PISA_srp-SRB_SCI_S514_eng_FT2018_TRANSLATED.xlf` vs `PISA_srp-SRB_SCI_S514_eng_FT2018_VERIFIED.xlf`), you don't need to do anything else (see an [example](https://capps.capstan.be/Files/correspondences.xlsx)). 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 If the base name of the two files is **not** the same, then you need to fill in the two columns with the names of the files. For example:
