@@ -1,9 +1,5 @@
 # cApps documentation
 
-[![Travis Status](https://travis-ci.com/stanfordnlp/stanfordnlp.svg?token=RPNzRzNDQRoq2x3J2juj&branch=master)](https://travis-ci.com/stanfordnlp/stanfordnlp)
-[![PyPI Version](https://img.shields.io/pypi/v/stanfordnlp.svg?colorB=blue)](https://pypi.org/project/stanfordnlp/)
-![Python Versions](https://img.shields.io/pypi/pyversions/stanfordnlp.svg?colorB=blue)
-
 The Stanford NLP Group's official Python NLP library. It contains packages for running our latest fully neural pipeline from the CoNLL 2018 Shared Task and for accessing the Java Stanford CoreNLP server. For detailed information please visit our [official website](https://stanfordnlp.github.io/stanfordnlp/).
 
 ### References
