@@ -157,8 +157,7 @@ The xDiff report consists of a table with one row per segment where differences 
 | Original translation | The original/old translation  |
 | Edited translation   | The modified/new translation where you can see all track changes highlighted |
 
-Original translation = package 1 or file 1 or column 1 in the Excel \\
-Edited translation = package 2 or file 2 or column 2 in the Excel 
+The "original translation" refers to the one extracted from package 1 or file 1 or column 1 in the Excel. The "edited translation" refers to the one extracted from package 2 or file 2 or column 2 in the Excel.
 
 ### 4.3. Filtering results
 
