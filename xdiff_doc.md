@@ -14,7 +14,7 @@ If you visit [xDiff](https://capps.capstan.be/xdiff_cg.php), you will see a seri
 
 To modify the settings, click on the Settings tab (the first tab). You can modify the following settings:
 
-#### 1.1.1. Display
+#### Display
 
 You can choose whether you want to see rows or segments that have changed, or the ones that haven't changed, or both. 
 
@@ -28,15 +28,15 @@ You can upload different formats. To upload each format, click on the tab for th
 
 The expected input consists of text pairs, i.e. two versions of the same text, which can be two columns in a spreadsheet, two columns in one Excel file, two XLIFF files, two batches of XLIFF files or two OmegaT projects (typically two versions/stages of the same translation). 
 
-#### 1.2.1. Excel file
+#### Excel file
 
 If you want to compare two columns in a spreadsheet containing, say, a translation and an edited/verified version of that translation, select the number of the worksheet you want to analyze, and the column letters that correspond to the source text, the original translation and the modified translation. Then, simply press "Compare files".
 
-#### 1.2.2. Two XLIFF files
+#### Two XLIFF files
 
 If you want to compare two XLIFF files, you can upload the two files separately. Simply upload the two files, first the original and then the modified file, and press "Compare files". 
 
-#### 1.2.3. A batch of parallel XLIFF files
+#### A batch of parallel XLIFF files
 
 If you want to submit a set of XLIFF files and their corresponding modified versions, you can upload just one zip file containing all the files, which must be organized as follows. The zip file must contain: 
 
@@ -62,7 +62,7 @@ If the base name of the two files is **not** the same, then you need to fill in 
 4. Zip the two folders and the correspondences file together, and name it as you wish.
 5. Simply upload the zip file.
 
-#### 1.2.4. Two OMT packages
+#### Two OMT packages
 
 If you want to compare two OmegaT packages, simply drag and drop the two packages individually and press “Compare files”.
 
