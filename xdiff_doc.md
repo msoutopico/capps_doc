@@ -2,7 +2,7 @@
 
 This documentation describes how to use xDiff to obtain diff reports that show the difference between two versions of a text. A number of different file formats (or collections of files) can be submitted to xDiff, either through the web inteface or as a background process from the server `Ur`.
 
-# 1. Web interface 
+## 1. Web interface 
 
 If you visit [xDiff](https://capps.capstan.be/xdiff_cg.php), you will see a series of tabs which will display sections for defining or viewing:
 
@@ -19,22 +19,22 @@ To modify the settings, click on the Settings tab (the first tab). You can modif
 You can choose whether you want to see rows or segments that have changed, or the ones that haven't changed, or both. 
 
 <!--- #### 1.1.2. Diff granularity 
-You can choose whether you want to see the differences highlighted as full words or as individual characters. To change this, click on the “Clean up” button in the report page.
+You can choose whether you want to see the differences highlighted as full words or as individual characters. To change this, click on the **Clean up** button in the report page.
 --->
 
 ### 1.2. Upload types
 
 You can upload different formats. To upload each format, click on the tab for the file format that you want to upload.
 
-The expected input consists of text pairs, i.e. two versions of the same text, which can be two columns in a spreadsheet, two columns in one Excel file, two XLIFF files, two batches of XLIFF files or two OmegaT projects (typically two versions/stages of the same translation). 
+The expected input consists of text pairs (typically two versions/stages of the same translation), i.e. two versions of the same text, which can be two columns in a spreadsheet, two XLIFF files, two batches of XLIFF files or two OmegaT project packages. 
 
 #### Excel file
 
-If you want to compare two columns in a spreadsheet containing, say, a translation and an edited/verified version of that translation, select the number of the worksheet you want to analyze, and the column letters that correspond to the source text, the original translation and the modified translation. Then, simply press "Compare files".
+If you want to compare two columns in a spreadsheet containing, say, a translation and an edited/verified version of that translation, select the number of the worksheet you want to analyze, and the column letters that correspond to the source text, the original translation and the modified translation. Then, simply press **Compare files**.
 
 #### Two XLIFF files
 
-If you want to compare two XLIFF files, you can upload the two files separately. Simply upload the two files, first the original and then the modified file, and press "Compare files". 
+If you want to compare two XLIFF files, you can upload the two files separately. Simply upload the two files, first the original and then the modified file, and press **Compare files**.
 
 #### A batch of parallel XLIFF files
 
@@ -48,7 +48,7 @@ To prepare the zip file, proceed as follows:
 
 1. Create two folders and name them as you wish, e.g. Old and New, Original and Modified, Translation and Verification, etc.
 2. Put the original files in the first folder, and the modified files in the second folder.
-3. Create an Excel file and name it correspondences.xlsx. In this file, in the first row of the first worksheet, add the names of the folders: the first folder in the first cell (A1), and the second folder in the second cell (A2). The first two cells of the spreadsheet must contain the names of the two folders. 
+3. Create an Excel file and name it `correspondences.xlsx`. In this file, in the first row of the first worksheet, add the names of the folders: the first folder in the first cell (A1), and the second folder in the second cell (A2). The first two cells of the spreadsheet must contain the names of the two folders. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 If the base name of the modified files is the **same** as the original files plus some addition (e.g. `PISA_srp-SRB_SCI_S514_eng_FT2018_TRANSLATED.xlf` vs `PISA_srp-SRB_SCI_S514_eng_FT2018_VERIFIED.xlf`), you don't need to do anything else (see an [example](https://capps.capstan.be/Files/correspondences.xlsx)). 
@@ -64,55 +64,56 @@ If the base name of the two files is **not** the same, then you need to fill in 
 
 #### Two OMT packages
 
-If you want to compare two OmegaT packages, simply drag and drop the two packages individually and press “Compare files”.
+If you want to compare two OmegaT packages, simply drag and drop the two packages individually and press **Compare files**.
 
-# 2. Background service 
+## 2. Background service 
 
-A different approach has been implemented to obtain diff reports to show differences two OmegaT project packages for the translation of the PISA 2021 FT coding guides. This approach does not require uploading the two packages on the webpage, but instead the submission is done automatically behind the scenes provided that some constraints are respected. 
+A different approach has been implemented to obtain diff reports to show differences between two OmegaT project packages for the translation of the PISA 2021 FT coding guides. This approach does not require uploading the two packages on the webpage, but instead the submission is done automatically behind the scenes provided that some conditions are met. 
 
-## 2.1. Functionality
+### 2.1. Functionality
 
 A running service watches a pre-defined set of folder pairs in the server. Folders are watched in pairs because two packages must be submitted to xDiff. Whenever an OMT package appears in a watched folder (because the PM drops it there or downloads it there), the service will check whether its paired folder contains an OMT package and, if found, both packages will be submitted to xDiff. 
 
-If the process is successful, xDiff will process the request, compare the two packages, store the diff report in a database and respond with the URL to a page where that xDiff report can be consulted. The running service in Ur will write a log file and create a HTML document that points to the report URL. Opening the HTML document in a browser (e.g. by double-clicking it) will direct to the report page, so to all effects it's as if the report had been saved in the HTML document (provided there's an internet connection). 
+If the process is successful, xDiff will process the request, compare the two packages, store the diff report in a database and respond with the URL to a page where that xDiff report can be consulted. The running service in Ur will write a log file and create a HTML document that will open the report in the browser. To see the report, simply double click the HTML file to open it in a browser.
 
-If the process is not successful, xDiff will respond with an error message, which should be written in the log. No xDiff will be created in that case. 
+If the process is not successful, xDiff will respond with an error message, which should be written in the log. No xDiff reportr will be created in that case. 
 
 Both the log and the HTML report will be written in the second folder (next to the second package). 
 
-## 2.2. Watched folder definition
+### 2.2. Watched folder definition
 
-The folder pairs that must be watched are defined in the file `U:\PISA_2021\FIELD_TRIAL\_Tech\cg_xdiff\200129_Steps_for_Difference_Reports.xlsx`. 
+The folder pairs that must be watched are defined in the file `U:\PISA_2021\FIELD_TRIAL\_Tech\cg_xdiff\200129_Steps_for_Difference_Reports.xlsx`, which has the following structure: 
 
 | Steps where the diff report is needed | Path template to package 1 | Path template to package 2 | Notes |
 |:--------------------------------------|:---------------------------|:---------------------------|:------|
-| Verification review  | U:\PISA_2021\FIELD_TRIAL\XXX_xxx\4_CODING_GUIDES\01_VERIF_from_country | U:\PISA_2021\FIELD_TRIAL\XXX_xxx\4_CODING_GUIDES\03_VERIF_from_verifier | The differences between reconciled and verified version (for PM) |
-| Referee review  | U:\PISA_2021\FIELD_TRIAL\XXX_xxx\4_CODING_GUIDES\01_VERIF_from_country | U:\PISA_2021\FIELD_TRIAL\XXX_xxx\4_CODING_GUIDES\04_VERIF_reviewed_delivered | The differences between  reconciled and reviewed version (for Referee) |
+| Verification review  | `U:\PISA_2021\FIELD_TRIAL\XXX_xxx\4_CODING_GUIDES\01_VERIF_from_country` | `U:\\PISA_2021\FIELD_TRIAL\XXX_xxx\4_CODING_GUIDES\03_VERIF_from_verifier` | The differences between reconciled and verified version (for PM) |
+| Referee review  | `U:\PISA_2021\FIELD_TRIAL\XXX_xxx\4_CODING_GUIDES\01_VERIF_from_country` | `U:\PISA_2021\FIELD_TRIAL\XXX_xxx\4_CODING_GUIDES\04_VERIF_reviewed_delivered` | The differences between  reconciled and reviewed version (for Referee) |
 | etc. | | | |
 
-The service replaces `XXX_xxx` in each of these path templates with the actual language code and that way builds the list of all the folders that need to be watched for each version. Whenver a OMT package appears in the path to the second folder, it will look for the first OMT package in the path to the first folder and will submit both packages to xDiff.
+The service replaces `XXX_xxx` in each of these path templates with every actual language code and that way it builds the list of all the folders that need to be watched for each version. Whenever an OMT package appears in the second folder, it will fetch for the twin OMT package in the first folder and will submit both packages to xDiff.
 
-## 2.2. Constraints and disclaimer
+### 2.3. Constraints and disclaimer
 
-Some contrainsts were negotiated with the project's PM and must be observed. The process will not succeeed in the following cases.
+The process will not succeeed in the following cases:
 
 * If the first folder contains no OMT package.
 * If the first folder contains more than one OMT package.
 
 If any of these contrainsts is not convenient, it can be discussed. 
 
+## 3. Results
 
-### 1.3. Results
-
-You can access reports in two ways:
+You can access reports in three ways:
 
 1. After your submission has been processed by uploading the files through the webpage, the page will display a one-row table for the diff report that has been generated based on the analysis of your upload. Use this to access the diff report you have just generated.
-2. Regardless of the submission mode, the Reports tab will display the whole list of diff reports available to you, where you can access any previously generated report. 
+2. Double-clicking the HTML file that appears in the second folder besides the second pair OMT package when using the background service in `Ur`.
+3. Regardless of the submission mode, the **Reports** tab will display the whole list of diff reports available to you, where you can access any previously generated report. 
 
 In either case, in the row for each report, you have some information about the report, as well as some buttons: 
 
 * Click the eye button to open the report page in a new tab
 * Click the copy button to copy the URL to that report to your clipboard 
+<!--- * Click the delete button to delete that report --->
 
 ## 4. The xDiff report page
 
