@@ -167,6 +167,6 @@ You can also make a combined search, if you wish to see changes only in a certai
 
 ### 4.4. Cleaning up results
 
-Click the Clean-up button to make track changes more readable. If a word contains more than 4 edits (deletions or addition or replacements), the edits will be joined as one single change of several characters.
+Click the **Clean-up** button to make track changes more readable. If a word contains more than 4 edits (deletions or addition or replacements), the edits will be joined as one single change of several characters.
 
 Any feedback would be greatly appreciated. Feel free to [contact us](mailto:manuel.souto@capstan.be).
