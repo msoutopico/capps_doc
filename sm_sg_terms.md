@@ -1,4 +1,4 @@
-# cApStAn Style Guides App - Terms of Use
+# cApStAn Style Guides App -- Terms of Use
 
 Effective as of 10 April 2020
 
