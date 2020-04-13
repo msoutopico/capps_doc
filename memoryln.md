@@ -33,31 +33,31 @@ You can choose from which domain you want to have results (cognitive materials, 
 
 #### Wildcard
 
-Select this option if you want to use wildcards in your search, such as '?' to match any character and '*' to match any string.
+Select this option if you want to use **wildcards** in your search, such as  `?` to match any character and `*` to match any string.
 
 #### Loose words
 
-Select this option if you want to match words appearing separately (e.g. +main +task) in the text, that is, as independent keywords to be found in different positions in the segment. By default, the search query is used as a fixed exact phrase, that is, as a sequence in the exact same order in which you have entered it (e.g. "main task").
+Select this option if you want to match **words appearing separately** (e.g. `+main +task`) in the text, that is, as independent keywords to be found in different positions in the segment. By default, the search query is used as a **fixed exact phrase**, that is, as a sequence in the exact same order in which you have entered it (e.g. `main task`).
 
 #### Entire words
 
-Select this option if you want your search expression to match entire words (e.g. "to" but not "to" in "towards") or leave it unselected it you want partial matches of longer words to be included in the results (e.g. both "to" and "to" in "towards"). If you select this option, you will get results that include your search expression where it starts and ends with a space or a punctuation sign.
+Select this option if you want your search expression to match **entire words** (e.g. so that `to` matches "to" but not "to" in "towards") or leave it unselected it you want partial matches of longer words to be included in the results (e.g. so that `to` matches both "to" and "to" in "towards"). If you select this option, you will get results that include your search expression where it starts and ends with a space or a punctuation sign.
 
 #### Case sensitive
 
-Select this option if you want your search expression to be case sensitive, that is, to run with the same exact case used in the search query e.g. CASE ≠ case ≠ cAsE. By default, case is ignored.
+Select this option if you want your search expression to be **case sensitive**, that is, to run with the same exact case used in the search query e.g. CASE ≠ case ≠ cAsE. By default, case is ignored.
 
 #### Negation
 
-Select this option if you want to find segments that do not contain the search expression, e.g. if you want to translations in French for "student" that do not contain "élève", you can search for "élève" in the target language and select the negate option.
+Select this option if you want to find segments that do not contain the search expression, e.g. if you want to find translations in French for "student" that do not contain "élève", you can search for "élève" in the target language and select the negate option.
 
 #### Full segment
 
-If selected, the entire segment (from beginning to end) needs to match the search query. By default, partial matches (part of the segment) are included in the results. For example, if you select this option and search for "early childhood", your results will include the segment [Early childhood] but not [Early childhood education].
+If selected, the **entire segment** (from beginning to end) needs to match the search query. By default, partial matches (part of the segment) are included in the results. For example, if you select this option and search for "early childhood", your results will include the segment `Early childhood` but not `Early childhood education`.
 
 #### Regular expression
 
-Select this option if your search pattern is a regular expression (regex). Regular expressions are patterns that are interpreted in a special way (not literally) to match different strings of text that have in common the properties described by the regular expression. You need to follow the PCRE syntax. More info about regular expressions here and here is a playground.
+Select this option if your search pattern is a **regular expression** (regex). Regular expressions are patterns that are interpreted in a special way (not literally) to match different strings of text that have in common the properties described by the regular expression. You need to follow the PCRE syntax. More info about regular expressions [here](http://www.regular-expressions.info/) and here is a [playground](http://leaverou.github.io/regexplained/).
 
 ## Feedback and support
 
