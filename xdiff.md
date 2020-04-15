@@ -100,8 +100,8 @@ The folder pairs that must be watched are defined in the file `U:\PISA_2021\FIEL
 
 | Steps where the diff report is needed | Path template to package 1 | Path template to package 2 | Notes |
 |:--------------------------------------|:---------------------------|:---------------------------|:------|
-| Verification review  | `U:\PISA_2021\FIELD_TRIAL\XXX_xxx\4_CODING_GUIDES\01_VERIF_from_country` | `U:\\PISA_2021\FIELD_TRIAL\XXX_xxx\4_CODING_GUIDES\03_VERIF_from_verifier` | The differences between reconciled and verified version (for PM) |
-| Referee review  | `U:\PISA_2021\FIELD_TRIAL\XXX_xxx\4_CODING_GUIDES\01_VERIF_from_country` | `U:\PISA_2021\FIELD_TRIAL\XXX_xxx\4_CODING_GUIDES\04_VERIF_reviewed_delivered` | The differences between  reconciled and reviewed version (for Referee) |
+| Verification review  | U:\PISA_2021\FIELD_TRIAL\XXX_xxx\4_CODING_GUIDES\01_VERIF_from_country | U:\\PISA_2021\FIELD_TRIAL\XXX_xxx\4_CODING_GUIDES\03_VERIF_from_verifier | The differences between reconciled and verified version (for PM) |
+| Referee review  | U:\PISA_2021\FIELD_TRIAL\XXX_xxx\4_CODING_GUIDES\01_VERIF_from_country | U:\PISA_2021\FIELD_TRIAL\XXX_xxx\4_CODING_GUIDES\04_VERIF_reviewed_delivered | The differences between  reconciled and reviewed version (for Referee) |
 | etc. | | | |
 
 The service replaces `XXX_xxx` in each of these path templates with every actual language code and that way it builds the list of all the folders that need to be watched for each version. Whenever an OMT package appears in the second folder, it will fetch for the twin OMT package in the first folder and will submit both packages to xDiff.
