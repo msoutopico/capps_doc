@@ -80,7 +80,20 @@ If the process is not successful, xDiff will respond with an error message, whic
 
 Both the log and the HTML report will be written in the second folder (next to the second package). 
 
-### 2.2. Watched folder definition
+### 2.2. How to use it
+
+To run xDiff in the background, follow these steps: 
+
+* Make sure the first package is in the first folder
+* Drag and drop the second package to the second folder
+* Wait for a few seconds
+* Double click the HTML report to open it or send/upload it to be used by third parties
+
+![](https://im.ezgif.com/tmp/ezgif-1-90ae1696978b.gif)
+<!-- https://ezgif.com/resize -->
+
+
+### 2.3. Watched folder definition
 
 The folder pairs that must be watched are defined in the file `U:\PISA_2021\FIELD_TRIAL\_Tech\cg_xdiff\200129_Steps_for_Difference_Reports.xlsx`, which has the following structure: 
 
@@ -92,7 +105,7 @@ The folder pairs that must be watched are defined in the file `U:\PISA_2021\FIEL
 
 The service replaces `XXX_xxx` in each of these path templates with every actual language code and that way it builds the list of all the folders that need to be watched for each version. Whenever an OMT package appears in the second folder, it will fetch for the twin OMT package in the first folder and will submit both packages to xDiff.
 
-### 2.3. Constraints and disclaimer
+### 2.4. Constraints and disclaimer
 
 The process will not succeeed in the following cases:
 
