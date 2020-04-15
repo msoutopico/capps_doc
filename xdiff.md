@@ -89,7 +89,8 @@ To run xDiff in the background, follow these steps:
 * Wait for a few seconds
 * Double click the HTML report to open it or send/upload it to be used by third parties
 
-![](https://im.ezgif.com/tmp/ezgif-1-90ae1696978b.gif)
+![jcoyYX7G4L](https://user-images.githubusercontent.com/3659409/79289439-8306ab00-7ec9-11ea-93aa-a79d6fa9ff5c.gif)
+<!--- https://im.ezgif.com/tmp/ezgif-1-90ae1696978b.gif) --->
 <!-- https://ezgif.com/resize -->
 
 
