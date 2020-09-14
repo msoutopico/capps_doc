@@ -36,25 +36,25 @@ The user or the PM should provide an almost ready file, where literal matches ne
 
 To streamline the process, please observe the following recommendations.
 
-##### Structure of the ruleset
+#### Structure of the ruleset
 
 * Line breaks should be avoided within cells. 
 * No merged cells please – that makes it difficult to work with spreadsheets or CSV files (e.g. to import to the database). 
 * About rows in the file that classify the rest of the rows (and have a Roman number in column A): please remove them, or include that info at the end of the file in an extra column. 
 
-##### Separate data items clearly
+#### Separate data items clearly
 
 * No metalinguistic information in the cell that contains the pattern (e.g. POS: `value(verb)`, `access(verb)`) or anywhere else (except perhaps column `N/DevNotes`).
 
-##### Special characters / conventions
+#### Special characters / conventions
 
 * You will have to specify what special characters mean (or we can agree on some conventions). For example, in `[This] includes [followed by an enumeration]`, what do the square brackets mean? 
 
-##### Patterns
+#### Patterns
 
 * In the cases where the expression is meant to match a pattern, it would help me have the different examples that the expression is meant to match. Ideally, we should import the translations into ML, where I can run searches and get a good idea of what needs to be matched and what needs not. 
 
-##### Placeholders 
+#### Placeholders 
 
 * If the expression is meant to match several options, you should indicate so. For example, I assume `take someone or something at face value` is not a literal match, but instead it should match "take someone at face value" or "take something at face value" or even "take ... at face value". If that's the case, you should provide an expression like `take (someone/something/*) at face value`. You shouldn't leave that to my discernment, because I might overlook it. 
 * If there are more than one term that should be matched by the same expression, include them in the same cell, not in different columns (and you can use the VF glossary wildcard syntax to separate them, e.g. `accountable;accountability`, or `accountab*`, depending how specify you want to be, or leave me the choice: `accountable/accountability`). In some cases, you might want to have different rows, e.g. for "actual" and for "actualise". 
