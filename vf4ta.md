@@ -21,7 +21,7 @@ Some checks are generic: `FindSemanticCorrespondence`, `Semiidenticalness`, etc.
 Veryfire reads rules that must have a certain structure:
 
 | Col. |       Title      |                                                Description                                               |
-|:----:|:----------------:|:--------------------------------------------------------------------------------------------------------:|
+|:----|:----------------|:--------------------------------------------------------------------------------------------------------|
 | A    | Active           | active if empty, inactive if "#"                                                                         |
 | B    | Expression       | the pattern you want to match                                                                            |
 | C    | Category         | the category that VF4TA must choose                                                                      |
