@@ -62,4 +62,8 @@ To streamline the process, please observe the following recommendations.
 
 ## Results 
 
-You can see the results in the HTML report or, if you are using Veryfire as a 3rd or 4th linguist, you should then use the merged report. * * * Any feedback would be greatly appreciated. Feel free to [contact us](mailto:manuel.souto@capstan.be).
+You can see the results in the HTML report or, if you are using Veryfire as a 3rd or 4th linguist, you should then use the merged report. 
+
+* * * 
+
+Any feedback would be greatly appreciated. Feel free to [contact us](mailto:manuel.souto@capstan.be).
