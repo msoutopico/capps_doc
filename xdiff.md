@@ -66,6 +66,10 @@ If the base name of the two files is **not** the same, then you need to fill in 
 
 If you want to compare two OmegaT packages, simply drag and drop the two packages individually and press **Compare files**.
 
+### 1.3. List of existing reports
+
+The Reports tab lists the latest 100 reports for containers and target languages that the user credentials give access to.
+
 ## 2. Background service 
 
 A different approach has been implemented to obtain diff reports to show differences between two OmegaT project packages for the translation of the PISA 2021 FT coding guides. This approach does not require uploading the two packages on the webpage, but instead the submission is done automatically behind the scenes provided that some conditions are met. 
