@@ -2,13 +2,13 @@
 
 ## 2020-11-15
 
-### On main page:
+### Main page:
 * Corrupted OMT packages failed silently and gave a report with no differences -> no report is created now
 * Delete button in report list deleted report even if confirmation was cancelled -> cancel button stops the action now
 * Table styles, search box, and sorting were gone -> restored now
 * Drop area did not show file dragged -> restored now
 
-### On report page:
+### Report page:
 * Arabic/Hebrew text had wrong left-to-right direction -> correct RTL direction now
 * Font used (Rockwell) in cells did not display all languages clearly -> changed to Segoe UI
 * Clean-up button had an unclear name -> renamed as to reflect what it actually does
